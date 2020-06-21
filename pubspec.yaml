@@ -19,3 +19,8 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  fonts:
+    - family: 'Museo Moderno'
+      fonts:
+        - asset: 'fonts/MuseoModerno-Regular.ttf'
