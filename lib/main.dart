@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:quizzler/quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 QuizBrain quizBrain = QuizBrain();
 
@@ -35,6 +36,34 @@ class _QuizPageState extends State<QuizPage> {
 
     setState(() {
       if (quizBrain.isFinished() == true) {
+        Alert(
+          context: context,
+          title: 'Finished!',
+          desc: 'You\'ve reached the end of the quiz.',
+          buttons: <DialogButton>[],
+          style: AlertStyle(
+            titleStyle: TextStyle(
+              color: Colors.white,
+              fontSize: 25.0,
+              fontFamily: 'Museo Moderno',
+              fontWeight: FontWeight.bold,
+            ),
+            descStyle: TextStyle(
+              color: Colors.white,
+              fontFamily: 'Museo Moderno',
+            ),
+            alertBorder: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(0.0),
+              side: BorderSide(
+                color: Colors.grey.shade100,
+                width: 5.0,
+              ),
+            ),
+            backgroundColor: Colors.grey[900],
+            isCloseButton: false,
+          ),
+        ).show();
+
         quizBrain.reset();
         scoreKeeper = [];
       } else {
