@@ -6,7 +6,7 @@ Flutter is Google's UI toolkit for building beautiful, natively compiled applica
 
 ## About Quizzler
 
-This repository presents a test application that assesses your general knowledge. As one of the most popular types of applications in the application stores.
+This repository presents to app that tests your general knowledge. As one of the most popular types of applications in the application stores.
 
 <img src="quizzler.gif" width="300">
 
